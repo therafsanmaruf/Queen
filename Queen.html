@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy National Princess Day, My Love</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ffe6f0, #ffb3d9, #ff99cc);
+            color: #4a4a4a;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 3em;
+            color: #d63384;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .crown {
+            font-size: 4em;
+            margin-bottom: 20px;
+            animation: sparkle 2s infinite alternate;
+        }
+        @keyframes sparkle {
+            from { text-shadow: 0 0 5px #ffd700; }
+            to { text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700; }
+        }
+        .letter {
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-align: left;
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(255, 228, 240, 0.8);
+            border-radius: 15px;
+            border: 2px solid #ffb3d9;
+        }
+        .letter p {
+            margin-bottom: 15px;
+        }
+        .signature {
+            font-style: italic;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #d63384;
+        }
+        .hearts {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            font-size: 2em;
+            color: #ff69b4;
+            animation: float 3s ease-in-out infinite;
+        }
+        .hearts:nth-child(2) {
+            top: 20%;
+            left: 80%;
+            animation-delay: 1s;
+        }
+        .hearts:nth-child(3) {
+            top: 70%;
+            left: 20%;
+            animation-delay: 2s;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            .letter { font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts">♥</div>
+    <div class="hearts">♥</div>
+    <div class="hearts">♥</div>
+    <div class="container">
+        <div class="crown">👑</div>
+        <h1>Happy National Princess Day, My Love!</h1>
+        <div class="letter">
+            <p>My Dearest Princess,</p>
+            <p>On National Princess Day, I realize this holiday must have been created just for you. Because you are not only the princess of this world, but the unchallenged, beautiful queen of mine.</p>Happy National Princess Day, my love.
+            <p>Your crown isn't just a symbol,it's the brilliance of your spirit, the resilience of your kindness, and the quiet, unforgettable grace you carry everywhere you go. Every day spent with you feels like a journey through the most beautiful kingdom, and you are the light that guides every step.</p>
+            <p>Thank you for reigning over my life with such love and tenderness. Know that my devotion is endless, and my admiration for the wonderful person you are will never fade.</p>
+            <p>Happy National Princess Day, my love. May your day be filled with all the sparkle and joy you deserve. I love you more than words can say.</p>
+            <p class="signature">Forever yours,<br>"Rafsan er baccha"</p>
+        </div>
+    </div>
+    <script>
+        // Simple script to add a confetti effect on load (optional fun touch)
+        window.onload = function() {
+            const container = document.querySelector('.container');
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'absolute';
+                confetti.style.width = '10px';
+                confetti.style.height = '10px';
+                confetti.style.background = ['#ff69b4', '#ffd700', '#ffb3d9'][Math.floor(Math.random() * 3)];
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.top = '-10px';
+                confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear infinite`;
+                container.appendChild(confetti);
+            }
+        };
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to { transform: translateY(100vh); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
+
